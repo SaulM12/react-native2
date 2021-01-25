@@ -10,7 +10,7 @@ import "firebase/firestore";
 
 const { width: screenWidth } = Dimensions.get('window')
 export default function ItemNavigate() {
-
+      
     let route = useRoute();
     let item = route.params.item;
     const [userName, setUserName] = useState('');
@@ -38,7 +38,9 @@ export default function ItemNavigate() {
             FK_place_id: item.id
         }
         comments.doc().set(comment);
-
+        getData();
+        synch();
+      
     }
 
     const synch = () => {
@@ -55,6 +57,7 @@ export default function ItemNavigate() {
 
             })
             setData(commentsList);
+            
 
         }).finally(() => setLoading(false));
     }
@@ -99,7 +102,7 @@ export default function ItemNavigate() {
                     </Text>
                 </View>
                 <View >
-                    <Text style={styles.Text4}> ¿Te gustó este lugar? Deja un comentario</Text>
+                    <Text style={styles.Text5}> ¿Te gustó este lugar? Deja un comentario</Text>
                     <Text style={styles.Text4}> {userName}  </Text>
                 </View>
                 <View style={styles.textInput}>
@@ -129,9 +132,12 @@ export default function ItemNavigate() {
                                         renderItem={({ item }) => (
                                             <View style={styles.containerComment}>
                                             
-                                                <Text style={styles.Text3}> {item.user}</Text>
+                                                
                                                 <View style={styles.container}>
+                                                <Text style={styles.Text3}> {item.user}:  </Text>
+                                                
                                                 <Text style={styles.Text2}>{item.comment}</Text>
+                                                
                                                 </View>
                                                 
                                             </View>)}
@@ -154,10 +160,11 @@ export default function ItemNavigate() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor:'#E8E8E8'
+        backgroundColor:'#E8E8E8',
+        flexDirection:'row'
     },
     containerComment: {
-    borderColor:'#E8E8E8',
+    borderColor:'#6E6E6E',
     borderWidth:2,
     margin:2
     },
@@ -200,7 +207,7 @@ const styles = StyleSheet.create({
         marginBottom:2,
         justifyContent: 'center',
         fontFamily: 'serif',
-        backgroundColor: '#E8E8E8'
+       
     },
     Text3: {
         marginTop: 7,
