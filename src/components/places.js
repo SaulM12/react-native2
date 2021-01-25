@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import {View, FlatList, StyleSheet, Platform, StatusBar, SafeAreaView, ActivityIndicator } from "react-native";
 import {useRoute} from '@react-navigation/native';
-import NavigateDescription from '../Lists/itemPlaceDescription'
-import firebase from "../firebase/firebase";
+import NavigateDescription from '../Lists/ItemPlaceDescription'
+import firebase from "../Firebase/Firebase";
 import "firebase/firestore";
 
 export default function NavigationPlaces({ navigation }) {

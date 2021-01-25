@@ -4,8 +4,8 @@ import {
     Alert, TouchableHighlight
 } from 'react-native';
 import { Input } from 'react-native-elements';
-import ContextNavigation from "../screens/context";
-import firebase from "../firebase/firebase";
+import ContextNavigation from "../Screens/Context";
+import firebase from "../Firebase/Firebase";
 import "firebase/firestore";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 var md5 = require('md5');

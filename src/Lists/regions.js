@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {View, FlatList, StyleSheet, Platform, StatusBar, SafeAreaView, ActivityIndicator } from "react-native";
-import ItemRegions from '../Lists/itemRegions'
+import ItemRegions from './ItemRegions'
 
-import firebase from "../firebase/firebase";
+import firebase from "../Firebase/Firebase";
 import "firebase/firestore";
 
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, TouchableOpacity, SafeAreaView, Text, Dimensions, Platform, StatusBar } from 'react-native';
 import { Input } from 'react-native-elements';
-import firebase from "../firebase/firebase";
+import firebase from "../Firebase/Firebase";
 import "firebase/firestore";
 var md5 = require('md5');
 

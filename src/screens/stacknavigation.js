@@ -1,10 +1,10 @@
 import React from 'react';
 import {Button} from 'react-native'
 import { createStackNavigator } from '@react-navigation/stack';
-import NavigationRegions from '../Lists/regions';
-import ItemNavigate from "../Lists/itemPlace";
-import NavigationPlaces from '../components/places';
-import ContextNavigation from "./context";
+import NavigationRegions from '../Lists/Regions';
+import ItemNavigate from "../Lists/ItemPlace";
+import NavigationPlaces from '../Components/Places';
+import ContextNavigation from "./Context";
 
 const Stack = createStackNavigator();
 

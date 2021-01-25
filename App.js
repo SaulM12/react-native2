@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import IndexAppScreen from './src/screens/indexnavigations';
+import IndexAppScreen from './src/Screens/Indexnavigations';
 
 
 

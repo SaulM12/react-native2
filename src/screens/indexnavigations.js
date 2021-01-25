@@ -1,10 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from '@react-navigation/stack';
-import ContextNavigation from "./context";
-import Login from "../principal/login";
-import PrincipalScreens from "./stacknavigation";
-import Register from '../principal/register';
+import ContextNavigation from "./Context";
+import Login from "../Principal/Login";
+import PrincipalScreens from "./Stacknavigation";
+import Register from '../Principal/Register';
 
 const RootStack = createStackNavigator();
 const Stack = createStackNavigator();

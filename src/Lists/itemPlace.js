@@ -5,7 +5,7 @@ import Carousel from 'simple-carousel-react-native';
 import { ScrollView } from "react-native-gesture-handler";
 import { Input } from 'react-native-elements';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import firebase from "../firebase/firebase";
+import firebase from "../Firebase/Firebase";
 import "firebase/firestore";
 
 const { width: screenWidth } = Dimensions.get('window')
