@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Dimensions, Image, TouchableOpacity, StyleSheet, Text, View, StatusBar, ActivityIndicator, FlatList, SafeAreaView } from "react-native";
+import { Dimensions, Image, TouchableOpacity, StyleSheet, Text, View,  ActivityIndicator, FlatList, SafeAreaView } from "react-native";
 import { useRoute } from '@react-navigation/native';
 import Carousel from 'simple-carousel-react-native';
 import { ScrollView } from "react-native-gesture-handler";
@@ -18,6 +18,7 @@ export default function ItemNavigate() {
     const comments = firebase.firestore().collection('Comments');
     const [data, setData] = useState([]);
     const [isLoading, setLoading] = useState(true);
+    const newComment = React.createRef();
 
     const getData = async () => {
         try {
@@ -38,8 +39,8 @@ export default function ItemNavigate() {
             FK_place_id: item.id
         }
         comments.doc().set(comment);
-        getData();
         synch();
+        newComment.current.clear();
       
     }
 
@@ -109,6 +110,7 @@ export default function ItemNavigate() {
                     <Input
                         placeholder='Reseña'
                         onChangeText={returnOnChangeText => setComment(returnOnChangeText)}
+                        ref={newComment}
                     />
                 </View>
                 <View style={styles.textInput}>
